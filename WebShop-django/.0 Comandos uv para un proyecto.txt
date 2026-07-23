@@ -20,3 +20,14 @@ https://docs.djangoproject.com/en/6.0/intro/tutorial01/
 
 uv run django-admin startproject config .
 uv run python manage.py runserver
+
+
+------------------------------------------------
+Para inicializar el git
+git init
+git add .
+git commit -m "Primer proyecto Django con uv"
+Crear el repositorio en GitHub
+git remote add origin URL_DEL_REPOSITORIO
+git branch -M main
+git push -u origin main
