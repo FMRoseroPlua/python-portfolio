@@ -1,0 +1,22 @@
+Crear Carpeta del proyecto
+mkdir project_name
+
+Inicializar proyecto
+uv init
+
+Crear el entorno virtual
+uv venv
+
+Instalar librerías -- Equivalente a pip install
+uv add django
+uv add request 
+...
+
+Fin
+
+-------------------------------------------------
+Ahora se puede ya usar los comandos de django para iniciar el proyecto pero siempre con uv para hacer referencia al entorno virtual
+https://docs.djangoproject.com/en/6.0/intro/tutorial01/
+
+uv run django-admin startproject config .
+uv run python manage.py runserver
