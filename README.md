@@ -1,2 +1,12 @@
-# portafolio-python
-Python projects developed to strengthen my coding skills and expand my knowledge.
+# Mi Portfolio
+
+Portfolio personal desarrollado con Flask y Jinja.
+
+## Tecnologías
+
+- Python
+- Flask
+- Jinja2
+- HTML
+- CSS
+- JavaScript
