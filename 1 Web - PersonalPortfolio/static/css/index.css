@@ -1,0 +1,330 @@
+/* ========================================
+   HOME / INICIO
+   ======================================== */
+
+
+/* ========================================
+   SECCIÓN PRINCIPAL
+   ======================================== */
+
+#inicio {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 5rem 8%;
+
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(255, 70, 20, 0.10),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(255, 170, 0, 0.05),
+            transparent 30%
+        );
+}
+
+
+/* ========================================
+   CONTENIDO DEL INICIO
+   ======================================== */
+
+.inicio-contenido {
+    width: min(1200px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 5rem;
+}
+
+
+/* ========================================
+   TEXTO
+   ======================================== */
+
+.inicio-texto {
+    max-width: 650px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ========================================
+   SALUDO
+   ======================================== */
+
+.inicio-saludo {
+    margin: 0 0 0.8rem;
+
+    color: var(--color-naranja);
+
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* ========================================
+   NOMBRE
+   ======================================== */
+
+.inicio-nombre {
+    margin: 0;
+
+    font-size: clamp(3.5rem, 6vw, 6rem);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    letter-spacing: -0.05em;
+
+    background: var(--gradiente-frp);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* ========================================
+   PROFESIÓN
+   ======================================== */
+
+.inicio-profesion {
+    margin: 1.5rem 0 1.2rem;
+
+    color: var(--color-texto);
+
+    font-size: clamp(1.4rem, 2vw, 2rem);
+
+    font-weight: 500;
+
+    line-height: 1.3;
+}
+
+
+/* ========================================
+   DESCRIPCIÓN
+   ======================================== */
+
+.inicio-descripcion {
+    max-width: 580px;
+
+    margin: 0;
+
+    color: var(--color-texto-secundario);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   BOTONES
+   ======================================== */
+
+.inicio-botones {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 2.2rem;
+}
+
+
+/* ========================================
+   REDES SOCIALES
+   ======================================== */
+
+.redes-sociales {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.7rem;
+
+    margin-top: 2rem;
+}
+
+
+/* ========================================
+   ELEMENTO VISUAL
+   ======================================== */
+
+.inicio-visual {
+    min-height: 400px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: var(--radio-grande);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ========================================
+   BRILLO DEL ELEMENTO VISUAL
+   ======================================== */
+
+.inicio-visual-brillo {
+    width: 250px;
+
+    height: 250px;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: var(--color-naranja);
+
+    filter: blur(100px);
+
+    opacity: 0.12;
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CONTENIDO DEL ELEMENTO VISUAL
+   ======================================== */
+
+.inicio-visual-contenido {
+    width: 85%;
+
+    height: 80%;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    #inicio {
+        padding: 4rem 7%;
+    }
+
+
+    .inicio-contenido {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+    }
+
+
+    .inicio-texto {
+        max-width: 700px;
+    }
+
+
+    .inicio-visual {
+        min-height: 300px;
+    }
+}
+
+
+/* ========================================
+   MÓVIL
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    #inicio {
+        min-height: auto;
+
+        padding: 3.5rem 6%;
+    }
+
+
+    .inicio-nombre {
+        font-size: clamp(3rem, 15vw, 4.5rem);
+    }
+
+
+    .inicio-profesion {
+        font-size: 1.3rem;
+    }
+
+
+    .inicio-descripcion {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+    }
+
+
+    .inicio-botones {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .inicio-botones a {
+        width: 100%;
+    }
+
+
+    .inicio-visual {
+        min-height: 250px;
+    }
+}

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Felipe Rosero | About
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="about">
+        <div class="about-col1">
+            <h1>About</h1>
+            <img src="my_photo" alt=""> <!-- Foto circular-->
+            <ul>
+                <li><a href="">Bio</a></li>
+                <li><a href="">Experience</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Certifications</a></li>
+            </ul>
+            <div>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href=""><i class="bi bi-github"></i></a>
+              <a href=""><i class="bi bi-envelope"></i></a>
+            </div>
+        </div>
+        <div class="about-col2">
+            <p>I’m a senior full-stack developer with a strong frontend focus. I build scalable, high-performance web applications with React/Next.js and Angular, and I care a lot about clean architecture, maintainable code, and shipping pixel-accurate UIs that work reliably in real production environments.
+            </p>
+            <h2>Expirience</h2>
+            <div>
+              <span>Jan 2026 — Present</span>
+              <div>
+                <h3>
+                  Senior Full Stack Developer ·
+                  <span>SmartJob · Falabella</span>
+                </h3>
+                <p>
+                  I build and maintain enterprise-scale applications for Falabella Seller Center (Promotions team), supporting a multinational retail platform across Chile, Colombia, and Mexico. I focus on scalable UI architecture, reusable components, and high-traffic seller dashboards, working closely with product, design, and backend teams in an Agile environment.
+                </p>
+                <div>
+                  <span>React</span>
+                  <span>Fastify</span>
+                  <span>Microfrontends</span>
+                  <span>Design Systems</span>
+                  <span>i18n</span>
+                </div>
+              </div>
+            </div>
+            <h2>Skills & Tools</h2>
+            <div>
+                <ul>
+                    <h3>Frontend</h3>
+                    <li>a</li>
+                    <li>a</li>
+                    <li>a</li>
+                </ul>
+                <ul>
+                    <h3>Backend</h3>
+                    <li>b</li>
+                    <li>b</li>
+                    <li>b</li>
+                </ul>
+            </div>
+            <h3>Certifications</h3>
+            <div>
+              <div>
+                <h3>AWS Certified Cloud Practitioner</h3>
+                <p>AWS</p>
+              </div>
+              <span>2025</span>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

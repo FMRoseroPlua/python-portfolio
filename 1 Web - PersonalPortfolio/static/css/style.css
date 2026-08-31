@@ -1,0 +1,780 @@
+/* ========================================
+   FELIPE ROSERO - PORTFOLIO
+   ESTILOS GENERALES
+   ======================================== */
+
+
+/* ========================================
+   VARIABLES
+   ======================================== */
+
+:root {
+
+    /* -------------------------
+       Fondos
+       ------------------------- */
+
+    --color-fondo: #0a0a0f;
+    --color-fondo-secundario: #202125;
+    --color-tarjeta: #25262b;
+
+
+    /* -------------------------
+       Texto
+       ------------------------- */
+
+    --color-texto: #f5f5f5;
+    --color-texto-secundario: #b7b7bc;
+    --color-texto-suave: #85858d;
+
+
+    /* -------------------------
+       Paleta Lava
+       ------------------------- */
+
+    --color-rojo: #ff3b30;
+    --color-naranja: #ff641f;
+    --color-amarillo: #ffb000;
+
+
+    /* -------------------------
+       Identidad F.R.P.
+       ------------------------- */
+
+    --color-f: #ff3b30;
+    --color-r: #ff641f;
+    --color-p: #ffb000;
+
+
+    /* -------------------------
+       Gradientes
+       ------------------------- */
+
+    --gradiente-lava: linear-gradient(
+        135deg,
+        var(--color-rojo),
+        var(--color-naranja),
+        var(--color-amarillo)
+    );
+
+    --gradiente-frp: linear-gradient(
+        135deg,
+        var(--color-f),
+        var(--color-r),
+        var(--color-p)
+    );
+
+
+    /* -------------------------
+       Bordes
+       ------------------------- */
+
+    --color-borde: rgba(255, 255, 255, 0.08);
+
+    --color-borde-hover: rgba(255, 100, 30, 0.45);
+
+
+    /* -------------------------
+       Sombras
+       ------------------------- */
+
+    --sombra-suave:
+        0 10px 30px rgba(0, 0, 0, 0.20);
+
+    --sombra-lava:
+        0 10px 35px rgba(255, 60, 20, 0.20);
+
+
+    /* -------------------------
+       Bordes redondeados
+       ------------------------- */
+
+    --radio-pequeno: 8px;
+    --radio-medio: 12px;
+    --radio-grande: 20px;
+
+
+    /* -------------------------
+       Transiciones
+       ------------------------- */
+
+    --transicion: 0.25s ease;
+}
+
+
+/* ========================================
+   CONFIGURACIÓN GENERAL
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background-color: var(--color-fondo);
+
+    color: var(--color-texto);
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   FONDO GENERAL
+   ======================================== */
+
+body {
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(255, 70, 20, 0.06),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(255, 170, 0, 0.035),
+            transparent 25%
+        ),
+        var(--color-fondo);
+}
+
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+   ======================================== */
+
+main {
+    width: 100%;
+
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   TEXTOS
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+
+    color: var(--color-texto);
+
+    font-weight: 700;
+}
+
+
+p {
+    color: var(--color-texto-secundario);
+}
+
+
+strong {
+    color: var(--color-texto);
+}
+
+
+/* ========================================
+   ENLACES
+   ======================================== */
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        color var(--transicion),
+        background-color var(--transicion),
+        border-color var(--transicion),
+        transform var(--transicion),
+        box-shadow var(--transicion);
+}
+
+
+a:hover {
+    color: var(--color-naranja);
+}
+
+
+/* ========================================
+   IDENTIDAD F.R.P.
+   ======================================== */
+
+/* Felipe */
+
+.color-f {
+    color: var(--color-f);
+}
+
+
+/* Rosero */
+
+.color-r {
+    color: var(--color-r);
+}
+
+
+/* Portfolio */
+
+.color-p {
+    color: var(--color-p);
+}
+
+
+/* F.R.P. completo */
+
+.logo-frp {
+    display: inline-flex;
+
+    align-items: center;
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+}
+
+
+.logo-frp .color-f,
+.logo-frp .color-r,
+.logo-frp .color-p {
+    transition:
+        color var(--transicion),
+        text-shadow var(--transicion);
+}
+
+
+.logo-frp:hover .color-f {
+    color: var(--color-f);
+
+    text-shadow:
+        0 0 15px rgba(255, 59, 48, 0.45);
+}
+
+
+.logo-frp:hover .color-r {
+    color: var(--color-r);
+
+    text-shadow:
+        0 0 15px rgba(255, 100, 31, 0.45);
+}
+
+
+.logo-frp:hover .color-p {
+    color: var(--color-p);
+
+    text-shadow:
+        0 0 15px rgba(255, 176, 0, 0.45);
+}
+
+
+/* ========================================
+   SELECCIÓN DE TEXTO
+   ======================================== */
+
+::selection {
+    color: #171717;
+
+    background-color: var(--color-naranja);
+}
+
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: var(--color-fondo);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #34353a;
+
+    border-radius: 10px;
+
+    border: 2px solid var(--color-fondo);
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-naranja);
+}
+
+
+/* ========================================
+   BOTONES GENERALES
+   ======================================== */
+
+.boton-principal {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    padding: 0.85rem 1.5rem;
+
+    border: none;
+
+    border-radius: var(--radio-pequeno);
+
+    color: #151515;
+
+    background: var(--gradiente-lava);
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(255, 70, 20, 0.18);
+
+    transition:
+        transform var(--transicion),
+        box-shadow var(--transicion);
+}
+
+
+.boton-principal:hover {
+    color: #151515;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 35px rgba(255, 70, 20, 0.35);
+}
+
+
+/* ========================================
+   BOTÓN SECUNDARIO
+   ======================================== */
+
+.boton-secundario {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    padding: 0.85rem 1.5rem;
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: var(--radio-pequeno);
+
+    color: var(--color-texto);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.boton-secundario:hover {
+    color: var(--color-texto);
+
+    border-color: var(--color-borde-hover);
+
+    background: rgba(255, 80, 20, 0.08);
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   TARJETAS
+   ======================================== */
+
+.tarjeta {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: var(--radio-grande);
+
+    box-shadow: var(--sombra-suave);
+
+    transition:
+        border-color var(--transicion),
+        transform var(--transicion),
+        box-shadow var(--transicion);
+}
+
+
+.tarjeta:hover {
+    border-color: var(--color-borde-hover);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.30),
+        0 5px 25px rgba(255, 60, 20, 0.08);
+}
+
+
+/* ========================================
+   ICONOS GENERALES
+   ======================================== */
+
+.icono {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-texto-secundario);
+
+    transition:
+        color var(--transicion),
+        transform var(--transicion),
+        background-color var(--transicion),
+        border-color var(--transicion),
+        box-shadow var(--transicion);
+}
+
+
+/* Icono con círculo */
+
+.icono-circulo {
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--color-borde);
+
+    border-radius: 50%;
+
+    color: var(--color-texto-secundario);
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+.icono-circulo:hover {
+    color: #ffffff;
+
+    border-color: var(--color-borde-hover);
+
+    background: rgba(255, 70, 20, 0.12);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 20px rgba(255, 60, 20, 0.15);
+}
+
+
+/* Icono lava */
+
+.icono-lava {
+    color: var(--color-naranja);
+}
+
+
+.icono-lava:hover {
+    color: var(--color-amarillo);
+
+    transform: translateY(-2px);
+}
+
+
+/* Icono grande */
+
+.icono-grande {
+    font-size: 1.5rem;
+}
+
+
+/* ========================================
+   TEXTO CON COLOR LAVA
+   ======================================== */
+
+.texto-lava {
+    background: var(--gradiente-lava);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* ========================================
+   EFECTO DE BRILLO LAVA
+   ======================================== */
+
+.brillo-lava {
+    box-shadow:
+        0 0 30px rgba(255, 60, 20, 0.12),
+        0 0 80px rgba(255, 120, 20, 0.05);
+}
+
+
+/* ========================================
+   CONTENEDOR GENERAL
+   ======================================== */
+
+.contenedor {
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 15px;
+    }
+
+
+    .contenedor {
+        width: 88%;
+    }
+
+
+    .boton-principal,
+    .boton-secundario {
+        padding: 0.8rem 1.2rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .contenedor {
+        width: 90%;
+    }
+}
+
+/* NAVBAR -------------------------------------------------------*/
+/* ========================================
+   NAVBAR
+   ======================================== */
+
+.custom-navbar {
+    background: rgba(10, 10, 15, 0.94);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* ========================================
+   LOGO F.R.P.
+   ======================================== */
+
+.custom-navbar .navbar-brand {
+    font-size: 1.4rem;
+
+    letter-spacing: 0.08em;
+
+    color: var(--color-texto);
+
+    transition:
+        transform var(--transicion),
+        text-shadow var(--transicion);
+}
+
+
+.custom-navbar .navbar-brand:hover {
+    color: var(--color-texto);
+
+    transform: translateY(-1px);
+}
+
+
+/* Colores del logo */
+
+.custom-navbar .navbar-brand .color-f {
+    color: var(--color-f);
+}
+
+
+.custom-navbar .navbar-brand .color-r {
+    color: var(--color-r);
+}
+
+
+.custom-navbar .navbar-brand .color-p {
+    color: var(--color-p);
+}
+
+
+/* ========================================
+   ENLACES DEL NAVBAR
+   ======================================== */
+
+.custom-navbar .nav-link {
+    position: relative;
+
+    padding: 0.5rem 0.75rem !important;
+
+    color: var(--color-texto-secundario) !important;
+
+    font-size: 0.95rem;
+
+    font-weight: 500;
+
+    transition:
+        color var(--transicion);
+}
+
+
+/* Línea lava */
+
+.custom-navbar .nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0.75rem;
+    right: 0.75rem;
+
+    bottom: 0.15rem;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: var(--gradiente-lava);
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition:
+        transform var(--transicion);
+}
+
+
+/* Hover */
+
+.custom-navbar .nav-link:hover {
+    color: var(--color-texto) !important;
+}
+
+
+.custom-navbar .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Página actual */
+
+.custom-navbar .nav-link.active {
+    color: var(--color-texto) !important;
+}
+
+
+.custom-navbar .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+
+/* ========================================
+   BOTÓN MOBILE
+   ======================================== */
+
+.custom-navbar .navbar-toggler {
+    border-color: var(--color-borde);
+
+    padding: 0.45rem 0.65rem;
+
+    transition:
+        border-color var(--transicion),
+        box-shadow var(--transicion);
+}
+
+
+.custom-navbar .navbar-toggler:hover {
+    border-color: var(--color-naranja);
+}
+
+
+.custom-navbar .navbar-toggler:focus {
+    box-shadow:
+        0 0 0 0.15rem rgba(255, 100, 31, 0.20);
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 991px) {
+
+    .custom-navbar .navbar-collapse {
+        padding: 0.8rem 0;
+
+        border-top: 1px solid var(--color-borde);
+    }
+
+
+    .custom-navbar .nav-link {
+        padding: 0.65rem 0 !important;
+    }
+
+
+    .custom-navbar .nav-link::after {
+        left: 0;
+        right: auto;
+
+        width: 35px;
+
+        bottom: 0.3rem;
+    }
+
+}

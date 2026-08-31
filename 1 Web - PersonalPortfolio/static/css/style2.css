@@ -1,0 +1,220 @@
+/* ========================================
+   GLOBAL
+======================================== */
+
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #101018;
+    --bg-card: #15151f;
+
+    --text-primary: #f5f5f7;
+    --text-secondary: #a1a1aa;
+
+    --accent: #8b5cf6;
+    --accent-light: #a78bfa;
+    --accent-blue: #6366f1;
+
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+
+    padding-top: 76px;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.custom-navbar {
+    background: rgba(10, 10, 15, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid var(--border);
+
+    transition: background-color 0.3s ease;
+}
+
+
+/* Brand */
+
+.navbar-brand {
+    font-size: 1.25rem;
+    letter-spacing: -0.5px;
+    color: var(--text-primary) !important;
+}
+
+.brand-bracket {
+    color: var(--accent-light);
+    font-weight: 500;
+}
+
+
+/* Navigation links */
+
+.navbar-nav .nav-link {
+    position: relative;
+
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    padding: 0.6rem 0.8rem !important;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+
+/* Active link */
+
+.navbar-nav .nav-link.active {
+    color: var(--text-primary);
+}
+
+.navbar-nav .nav-link.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0.8rem;
+    right: 0.8rem;
+    bottom: 2px;
+
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-blue)
+    );
+
+    border-radius: 999px;
+}
+
+
+/* ========================================
+   GITHUB BUTTON
+======================================== */
+
+.navbar-btn {
+    border-color: rgba(255, 255, 255, 0.2);
+
+    border-radius: 8px;
+
+    padding: 0.45rem 0.9rem;
+
+    font-size: 0.9rem;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.navbar-btn:hover {
+    background-color: rgba(139, 92, 246, 0.15);
+    border-color: var(--accent);
+
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   MOBILE NAVBAR
+======================================== */
+
+.navbar-toggler {
+    border-color: var(--border);
+    padding: 0.45rem 0.65rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.2);
+}
+
+@media (max-width: 991.98px) {
+
+    .navbar-collapse {
+        margin-top: 1rem;
+        padding: 1rem;
+
+        background: rgba(16, 16, 24, 0.95);
+
+        border: 1px solid var(--border);
+        border-radius: 12px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 0.5rem !important;
+    }
+
+    .navbar-nav .nav-link.active::after {
+        left: 0.5rem;
+        right: auto;
+        width: 30px;
+    }
+
+    .navbar-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* ========================================
+   GENERAL ELEMENTS
+======================================== */
+
+a {
+    color: var(--accent-light);
+    text-decoration: none;
+
+    transition: color 0.25s ease;
+}
+
+a:hover {
+    color: #c4b5fd;
+}
+
+::selection {
+    background-color: rgba(139, 92, 246, 0.35);
+    color: white;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}

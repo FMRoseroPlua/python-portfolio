@@ -14,8 +14,6 @@ uv add request
 
 Fin
 
-uv pip list
-
 -------------------------------------------------
 Ahora se puede ya usar los comandos de django para iniciar el proyecto pero siempre con uv para hacer referencia al entorno virtual
 https://docs.djangoproject.com/en/6.0/intro/tutorial01/

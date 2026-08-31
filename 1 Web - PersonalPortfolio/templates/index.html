@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Felipe Rosero | Python Developer
+{% endblock %}
+
+
+{% block styles %}
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/index.css') }}"
+>
+{% endblock %}
+
+
+{% block content %}
+
+<section id="inicio">
+
+    <div class="inicio-contenido">
+
+        <!-- Presentación -->
+        <div class="inicio-texto">
+
+            <p class="inicio-saludo">
+                Hello, I'm
+            </p>
+
+
+            <h1 class="inicio-nombre">
+                Felipe Rosero
+            </h1>
+
+
+            <h2 class="inicio-profesion">
+                Python Developer and Data Analyst
+            </h2>
+
+
+            <p class="inicio-descripcion">
+                I build digital solutions for problems combining
+                elegant design with advanced professional engineering
+                skills to create strong projects and scalable products.
+            </p>
+
+
+            <!-- Botones -->
+            <div class="inicio-botones">
+
+                <a
+                    href="{{ url_for('projects') }}"
+                    class="boton-principal"
+                >
+                    View projects
+                </a>
+
+
+                <a
+                    href="{{ url_for('contact') }}"
+                    class="boton-secundario"
+                >
+                    Contact me
+                </a>
+
+            </div>
+
+
+            <!-- Redes sociales -->
+            <div class="redes-sociales">
+
+                <a
+                    href=""
+                    class="icono icono-circulo"
+                    aria-label="LinkedIn"
+                >
+                    <i class="bi bi-linkedin"></i>
+                </a>
+
+
+                <a
+                    href=""
+                    class="icono icono-circulo"
+                    aria-label="GitHub"
+                >
+                    <i class="bi bi-github"></i>
+                </a>
+
+
+                <a
+                    href=""
+                    class="icono icono-circulo"
+                    aria-label="Email"
+                >
+                    <i class="bi bi-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Elemento visual -->
+        <div class="inicio-visual">
+
+            <div class="inicio-visual-brillo"></div>
+
+            <div class="inicio-visual-contenido">
+                <!-- Aquí posteriormente colocaremos
+                     nuestra composición visual -->
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
