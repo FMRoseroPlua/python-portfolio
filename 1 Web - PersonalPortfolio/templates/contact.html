@@ -4,77 +4,117 @@
     Felipe Rosero | Contact
 {% endblock %}
 
-{% block content %}
-<main>
-  <div>
-    <div>
-      <div>
-        <div>
-          <div>
-            <h1>Contact</h1>
-            <p>
-              Want to collaborate or talk about a role? I’m always open to opportunities related to
-              <span>React/Next.js</span>,
-              <span>Angular</span>,
-              <span>Node.js/NestJS</span>, and
-              <span>AWS</span>.
-              If you’re building a modern web product or improving an enterprise platform, I’d love to hear what you’re working on.
-            </p>
-          </div>
-
-          <div>
-            <div>
-              <div>
-                <i class="bi bi-geo-alt"></i>
-              </div>
-              <div>
-                <p>Location</p>
-                <p>Ecuador · Remote-friendly</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <p>You can also find me here</p>
-
-            <div>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-              <a href=""><i class="bi bi-github"></i></a>
-              <a href=""><i class="bi bi-envelope"></i></a>
-            </div>
-
-          </div>
-        </div>
-
-        <div>
-          <form>
-            <div>
-              <label for="name">Name</label>
-              <input required placeholder="Your name" type="text">
-            </div>
-
-            <div>
-              <label for="email">Email</label>
-              <input required placeholder="you@email.com" type="email">
-            </div>
-
-            <div>
-              <label for="message">Message</label>
-              <textarea required rows="5" placeholder="How can I help?"></textarea>
-            </div>
-
-            <button type="submit">
-              Send message
-
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
-                <path d="m21.854 2.147-10.94 10.939"></path>
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
 {% endblock %}
+
+{% block content %}
+
+<section id="contacto">
+    <div class="contacto-columna-izquierda">
+        <!-- ENCABEZADO -->
+        <div class="contacto-encabezado">
+            <div class="contacto-titulo">
+                <p class="contacto-subtitulo">Let's talk</p>
+                <h1>Contact</h1>
+            </div>
+
+            <p class="contacto-descripcion">
+                Want to collaborate or talk about a role?
+                I’m always open to opportunities related to
+                <span>React/Next.js</span>,
+                <span>Angular</span>,
+                <span>Node.js/NestJS</span>, and
+                <span>AWS</span>.
+                If you’re building a modern web product or improving
+                an enterprise platform, I’d love to hear what you’re
+                working on.
+            </p>
+        </div>
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <div class="contacto-informacion">
+            <!-- Ubicación -->
+            <div class="contacto-dato">
+                <div class="contacto-icono">
+                    <i class="bi bi-geo-alt"></i>
+                </div>
+                <div>
+                    <p class="contacto-label">Location</p>
+                    <p class="contacto-valor">Ecuador · Remote-friendly</p>
+                </div>
+            </div>
+
+            <!-- Redes -->
+            <div class="contacto-redes">
+                <p class="contacto-label">You can also find me here</p>
+
+                <!-- Redes sociales -->
+                <div class="redes-sociales">
+                    <a target="_blank" href="https://www.linkedin.com/in/felipe-rosero-plua" class="icono icono-circulo"><i class="bi bi-linkedin"></i></a>
+                    <a target="_blank" href="https://github.com/FMRoseroPlua" class="icono icono-circulo"><i class="bi bi-github"></i></a>
+                    <a target="_blank" href="mailto:felipem.roserop@gmail.com" class="icono icono-circulo"><i class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ====================================FORMULARIO==================================== -->
+
+    <div class="contacto-formulario">
+        <div class="formulario-encabezado">
+            <h2>Send me a message</h2>
+            <p>
+                Tell me a little about your project,
+                opportunity or idea.
+            </p>
+        </div>
+
+        <!-- FORMULARIO -->
+        <form action="{{ url_for('contact') }}" method="POST" class="formulario">
+          <div class="campo">
+              <label for="name">Name</label>
+              <input
+                  id="name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  placeholder="Your name"
+                  type="text"
+              >
+          </div>
+
+          <div class="campo">
+              <label for="email">Email</label>
+              <input
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  placeholder="you@email.com"
+                  type="email"
+              >
+          </div>
+
+          <div class="campo">
+              <label for="message">Message</label>
+              <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="6"
+                  placeholder="How can I help?"
+              ></textarea>
+          </div>
+
+          <button type="submit" class="boton-principal boton-enviar">
+              <span>Send message</span>
+              <i class="bi bi-arrow-up-right"></i>
+          </button>
+      </form>
+
+    </div>
+</section>
+
+{% endblock %}
+  

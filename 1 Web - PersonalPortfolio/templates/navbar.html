@@ -1,17 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
 
     <div class="container">
-
         <!-- Logo -->
-        <a
-            class="navbar-brand fw-bold logo-frp"
-            href="{{ url_for('home') }}"
-            aria-label="Felipe Rosero Portfolio"
-        >
-            <span class="color-f">F</span>
-            <span class="color-r">R</span>
-            <span class="color-p">P</span>
-            <span class="color-p">.</span>
+        <a class="navbar-brand fw-bold logo-frp" href="{{ url_for('home') }}" aria-label="Felipe Rosero Portfolio">
+            <span style="color: var(--color-f2);">F</span>
+            <span style="color: var(--color-r2);">R</span>
+            <span style="color: var(--color-p2);">P</span>
+            <span style="color: var(--color-p2);">.</span>
         </a>
 
 
@@ -28,66 +23,35 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-
         <!-- Navigation -->
-        <div
-            class="collapse navbar-collapse"
-            id="mainNavbar"
-        >
-
+        <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
 
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link {% if request.endpoint == 'home' %}active{% endif %}"
-                        href="{{ url_for('home') }}"
-                    >
+                    <a class="nav-link {% if request.endpoint == 'home' %}active{% endif %}" href="{{ url_for('home') }}">
                         Home
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link {% if request.endpoint == 'about' %}active{% endif %}"
-                        href="{{ url_for('about') }}"
-                    >
+                    <a class="nav-link {% if request.endpoint == 'about' %}active{% endif %}" href="{{ url_for('about') }}">
                         About
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link {% if request.endpoint == 'projects' %}active{% endif %}"
-                        href="{{ url_for('projects') }}"
-                    >
+                    <a class="nav-link {% if request.endpoint == 'projects' %}active{% endif %}" href="{{ url_for('projects') }}">
                         Projects
                     </a>
-
                 </li>
 
-
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link {% if request.endpoint == 'contact' %}active{% endif %}"
-                        href="{{ url_for('contact') }}"
-                    >
+                    <a class="nav-link {% if request.endpoint == 'contact' %}active{% endif %}" href="{{ url_for('contact') }}">
                         Contact
                     </a>
-
                 </li>
 
             </ul>
-
         </div>
-
     </div>
-
 </nav>

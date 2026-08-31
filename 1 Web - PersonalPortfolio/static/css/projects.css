@@ -1,0 +1,342 @@
+/* ========================================
+   PROJECTS
+   ======================================== */
+
+#proyectos {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 4rem 0 3rem;
+}
+
+/* ========================================
+   ENCABEZADO
+   ======================================== */
+
+.proyectos-encabezado {
+    max-width: 700px;
+    margin-bottom: 5rem;
+}
+
+.proyectos-subtitulo {
+    margin: 0 0 0.5rem;
+    color: var(--color-naranja);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.proyectos-titulo {
+    margin: 0;
+    font-size: clamp(3rem, 4vw, 5rem);
+    line-height: 1.3;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    background: var(--gradiente-frp);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.proyectos-descripcion {
+    max-width: 600px;
+    margin: 1.5rem 0 0;
+    color: var(--color-texto-secundario);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* ========================================
+   LISTA DE PROYECTOS
+   ======================================== */
+
+.lista-proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+/* ========================================
+   PROYECTO
+   ======================================== */
+
+.proyecto {
+    min-height: 430px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+}
+
+/* ========================================
+   PROYECTO INVERTIDO
+   ======================================== */
+
+.proyecto-invertido {
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+.proyecto-invertido .proyecto-info {
+    order: 2;
+}
+
+.proyecto-invertido .proyecto-imagen {
+    order: 1;
+}
+
+/* ========================================
+   INFORMACIÓN
+   ======================================== */
+
+.proyecto-info {
+    position: relative;
+    padding: 2rem 0;
+    z-index: 2;
+}
+
+/* Línea decorativa */
+
+.proyecto-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1.5rem;
+    width: 2px;
+    border-radius: 10px;
+    background: var(--gradiente-lava);
+    opacity: 0.7;
+}
+
+/* ========================================
+   NÚMERO
+   ======================================== */
+
+.proyecto-numero {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--color-naranja);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+/* ========================================
+   NOMBRE
+   ======================================== */
+
+.proyecto-nombre {
+    margin: 0;
+    color: var(--color-texto);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    font-weight: 750;
+    letter-spacing: -0.03em;
+}
+
+/* ========================================
+   DESCRIPCIÓN
+   ======================================== */
+
+.proyecto-descripcion {
+    max-width: 520px;
+    margin: 1.3rem 0 1.5rem;
+    color: var(--color-texto-secundario);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* ========================================
+   TECNOLOGÍAS
+   ======================================== */
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+.tecnologia {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 50px;
+    color: var(--color-texto-secundario);
+    background: rgba(255, 255, 255, 0.035);
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition:
+        color var(--transicion),
+        border-color var(--transicion),
+        background-color var(--transicion),
+        transform var(--transicion);
+}
+
+.tecnologia:hover {
+    color: var(--color-texto);
+    border-color: var(--color-borde-hover);
+    background: rgba(255, 70, 20, 0.08);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   IMAGEN DEL PROYECTO
+   ======================================== */
+
+.proyecto-imagen {
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-grande);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.015)
+        );
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* ========================================
+   BRILLO DETRÁS DE LA IMAGEN
+   ======================================== */
+
+.proyecto-imagen-brillo {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: var(--color-naranja);
+    filter: blur(90px);
+    opacity: 0.10;
+    pointer-events: none;
+}
+
+/* ========================================
+   IMAGEN
+   ======================================== */
+
+.proyecto-imagen img {
+    width: 88%;
+    max-height: 340px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    object-fit: contain;
+    border-radius: var(--radio-medio);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* ========================================
+   HOVER DEL PROYECTO
+   ======================================== */
+
+.proyecto:hover .proyecto-imagen {
+    transform: translateY(-5px);
+    border-color: var(--color-borde-hover);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35),
+        0 5px 35px rgba(255, 60, 20, 0.08);
+}
+
+.proyecto:hover .proyecto-imagen img {
+    transform: scale(1.025);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 900px) {
+    #proyectos {
+        padding-top: 6rem;
+    }
+
+    .proyecto,
+    .proyecto-invertido {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .proyecto-info,
+    .proyecto-invertido .proyecto-info {
+        order: 1;
+    }
+
+    .proyecto-imagen,
+    .proyecto-invertido .proyecto-imagen {
+        order: 2;
+    }
+
+    .proyecto-info::before {
+        left: -1rem;
+    }
+
+    .proyecto-imagen {
+        min-height: 320px;
+    }
+}
+
+/* ========================================
+   MÓVIL
+   ======================================== */
+
+@media (max-width: 600px) {
+    #proyectos {
+        width: 88%;
+        padding: 5rem 0 4rem;
+    }
+
+    .proyectos-encabezado {
+        margin-bottom: 3.5rem;
+    }
+
+    .proyectos-descripcion {
+        font-size: 0.95rem;
+    }
+
+    .lista-proyectos {
+        gap: 4rem;
+    }
+
+    .proyecto-info {
+        padding: 1rem 0;
+    }
+
+    .proyecto-info::before {
+        left: -0.8rem;
+    }
+
+    .proyecto-imagen {
+        min-height: 240px;
+        border-radius: var(--radio-medio);
+    }
+
+    .proyecto-imagen img {
+        width: 90%;
+    }
+
+    .tecnologia {
+        font-size: 0.75rem;
+    }
+}

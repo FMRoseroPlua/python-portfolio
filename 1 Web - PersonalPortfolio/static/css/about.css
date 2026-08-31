@@ -1,0 +1,445 @@
+
+#sobre-mi {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 4rem 0 3rem;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+/* ========================================
+   COLUMNA LATERAL
+   ======================================== */
+
+.sobre-lateral {
+    position: sticky;
+    top: 7rem;
+}
+
+.sobre-presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ========================================
+   ENCABEZADO
+   ======================================== */
+
+.sobre-subtitulo {
+    margin: 0 0 0.4rem;
+    color: var(--color-naranja);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.sobre-titulo {
+    margin: 0 0 2rem;
+    font-size: clamp(3rem, 5vw, 4rem);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    background: var(--gradiente-frp);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========================================
+   FOTO
+   ======================================== */
+
+.sobre-foto {
+    width: 220px;
+    height: 220px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.sobre-foto::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: var(--gradiente-lava); /*Lava circle*/
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.sobre-foto img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-fondo);
+    background: var(--color-tarjeta);
+}
+
+/* ========================================
+   BRILLO DE LA FOTO
+   ======================================== */
+
+.sobre-foto-brillo {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: var(--color-naranja);
+    filter: blur(60px);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* ========================================
+   MENÚ LATERAL
+   ======================================== */
+
+.sobre-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.sobre-menu a {
+    position: relative;
+    padding: 0.35rem 0;
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+    transition:
+        color var(--transicion),
+        padding-left var(--transicion);
+}
+
+.sobre-menu a::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    background: var(--gradiente-lava);
+    transition:
+        width var(--transicion);
+}
+
+.sobre-menu a:hover {
+    padding-left: 0.4rem;
+    color: var(--color-texto);
+}
+
+.sobre-menu a:hover::before {
+    width: 5px;
+}
+
+/* ========================================
+   CONTENIDO
+   ======================================== */
+
+.sobre-contenido {
+    max-width: 760px;
+}
+
+/* ========================================
+   SECCIONES
+   ======================================== */
+
+.sobre-seccion {
+    position: relative;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.sobre-seccion:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+/* ========================================
+   NÚMERO
+   ======================================== */
+
+.sobre-numero {
+    display: block;
+    margin-bottom: 0.7rem;
+    color: var(--color-naranja);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+/* ========================================
+   TÍTULOS
+   ======================================== */
+
+.sobre-seccion h2 {
+    margin: 0 0 1.5rem;
+    color: var(--color-texto);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 750;
+    letter-spacing: -0.03em;
+}
+
+/* ========================================
+   BIOGRAFÍA
+   ======================================== */
+
+.sobre-biografia {
+    margin: 0;
+    color: var(--color-texto-secundario);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+/* ========================================
+   EXPERIENCIA
+   ======================================== */
+
+.experiencia {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+}
+
+.experiencia-fecha {
+    color: var(--color-texto-suave);
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+.experiencia-contenido {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.experiencia-contenido::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-naranja);
+    box-shadow:
+        0 0 15px rgba(255, 100, 31, 0.55);
+}
+
+.experiencia-contenido h3 {
+    margin: 0 0 1rem;
+    color: var(--color-texto);
+    font-size: 1.2rem;
+    font-weight: 650;
+    line-height: 1.4;
+}
+
+.experiencia-contenido h3 span {
+    color: var(--color-naranja);
+}
+
+.experiencia-contenido > p {
+    margin: 0 0 1.3rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.8;
+}
+
+/* ========================================
+   HABILIDADES
+   ======================================== */
+
+.lista-habilidades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.grupo-habilidades {
+    padding: 1.5rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-medio);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.01)
+        );
+    transition:
+        border-color var(--transicion),
+        transform var(--transicion);
+}
+
+.grupo-habilidades:hover {
+    border-color: var(--color-borde-hover);
+    transform: translateY(-3px);
+}
+
+.grupo-habilidades h3 {
+    margin: 0 0 1rem;
+    color: var(--color-texto);
+}
+
+.grupo-habilidades ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.grupo-habilidades li {
+    position: relative;
+    padding: 0.3rem 0 0.3rem 1rem;
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+}
+
+.grupo-habilidades li::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: var(--color-naranja);
+}
+
+/* ========================================
+   CERTIFICACIÓN
+   ======================================== */
+
+.certificacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-medio);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.01)
+        );
+    transition:
+        border-color var(--transicion),
+        transform var(--transicion);
+}
+
+.certificacion:hover {
+    border-color: var(--color-borde-hover);
+    transform: translateY(-3px);
+}
+
+.certificacion h3 {
+    margin: 0 0 0.3rem;
+    color: var(--color-texto);
+    font-size: 1rem;
+}
+
+.certificacion p {
+    margin: 0;
+    color: var(--color-naranja);
+    font-size: 0.85rem;
+}
+
+.certificacion-fecha {
+    flex-shrink: 0;
+    color: var(--color-amarillo);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 900px) {
+    #sobre-mi {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding-top: 6rem;
+    }
+
+    .sobre-lateral {
+        position: static;
+    }
+
+    .sobre-presentacion {
+        align-items: flex-start;
+    }
+
+    .sobre-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+    }
+
+    .sobre-menu a::before {
+        display: none;
+    }
+
+    .sobre-menu a:hover {
+        padding-left: 0;
+    }
+
+    .sobre-contenido {
+        max-width: none;
+    }
+}
+
+/* ========================================
+   MÓVIL
+   ======================================== */
+
+@media (max-width: 600px) {
+    #sobre-mi {
+        width: 88%;
+        padding-top: 5rem;
+    }
+
+    .sobre-foto {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sobre-seccion {
+        padding-bottom: 3.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .experiencia {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .experiencia-fecha {
+        margin-bottom: 0.5rem;
+    }
+
+    .lista-habilidades {
+        grid-template-columns: 1fr;
+    }
+
+    .certificacion {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}

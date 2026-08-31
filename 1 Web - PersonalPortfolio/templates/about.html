@@ -9,69 +9,194 @@
 {% endblock %}
 
 {% block content %}
-    <div class="about">
-        <div class="about-col1">
-            <h1>About</h1>
-            <img src="my_photo" alt=""> <!-- Foto circular-->
-            <ul>
-                <li><a href="">Bio</a></li>
-                <li><a href="">Experience</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Certifications</a></li>
-            </ul>
-            <div>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-              <a href=""><i class="bi bi-github"></i></a>
-              <a href=""><i class="bi bi-envelope"></i></a>
-            </div>
-        </div>
-        <div class="about-col2">
-            <p>I’m a senior full-stack developer with a strong frontend focus. I build scalable, high-performance web applications with React/Next.js and Angular, and I care a lot about clean architecture, maintainable code, and shipping pixel-accurate UIs that work reliably in real production environments.
-            </p>
-            <h2>Expirience</h2>
-            <div>
-              <span>Jan 2026 — Present</span>
-              <div>
-                <h3>
-                  Senior Full Stack Developer ·
-                  <span>SmartJob · Falabella</span>
-                </h3>
-                <p>
-                  I build and maintain enterprise-scale applications for Falabella Seller Center (Promotions team), supporting a multinational retail platform across Chile, Colombia, and Mexico. I focus on scalable UI architecture, reusable components, and high-traffic seller dashboards, working closely with product, design, and backend teams in an Agile environment.
-                </p>
-                <div>
-                  <span>React</span>
-                  <span>Fastify</span>
-                  <span>Microfrontends</span>
-                  <span>Design Systems</span>
-                  <span>i18n</span>
-                </div>
-              </div>
-            </div>
-            <h2>Skills & Tools</h2>
-            <div>
-                <ul>
-                    <h3>Frontend</h3>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                </ul>
-                <ul>
-                    <h3>Backend</h3>
-                    <li>b</li>
-                    <li>b</li>
-                    <li>b</li>
-                </ul>
-            </div>
-            <h3>Certifications</h3>
-            <div>
-              <div>
-                <h3>AWS Certified Cloud Practitioner</h3>
-                <p>AWS</p>
-              </div>
-              <span>2025</span>
+<section id="sobre-mi">
+    <!-- ====================================
+         COLUMNA IZQUIERDA
+         ==================================== -->
+
+    <aside class="sobre-lateral">
+        <div class="sobre-presentacion">
+            <p class="sobre-subtitulo">Get to know me</p>
+
+            <h1 class="sobre-titulo">About</h1>
+
+            <!-- Foto -->
+            <div class="sobre-foto">
+                <div class="sobre-foto-brillo"></div>
+                <img src="../static/img/Foto.jpg" alt="Felipe Rosero">
             </div>
 
+            <!-- Navegación -->
+            <nav class="sobre-menu">
+                <a href="#biografia">Bio</a>
+                <a href="#experiencia">Experience</a>
+                <a href="#habilidades">Skills</a>
+                <a href="#certificaciones">Certifications</a>
+            </nav>
+
+                <!-- Redes sociales -->
+                <div class="redes-sociales">
+                    <a target="_blank" href="https://www.linkedin.com/in/felipe-rosero-plua" class="icono icono-circulo"><i class="bi bi-linkedin"></i></a>
+                    <a target="_blank" href="https://github.com/FMRoseroPlua" class="icono icono-circulo"><i class="bi bi-github"></i></a>
+                    <a target="_blank" href="mailto:felipem.roserop@gmail.com" class="icono icono-circulo"><i class="bi bi-envelope"></i></a>
+                </div>
         </div>
+    </aside>
+
+    <!-- ====================================
+         CONTENIDO
+         ==================================== -->
+
+    <div class="sobre-contenido">
+        <!-- =================================
+             BIO
+             ================================= -->
+
+        <section id="biografia" class="sobre-seccion">
+            <h2>
+                Bio
+            </h2>
+
+            <p class="sobre-biografia">
+                I’m a senior full-stack developer with a strong
+                frontend focus. I build scalable, high-performance
+                web applications with React/Next.js and Angular,
+                and I care a lot about clean architecture,
+                maintainable code, and shipping pixel-accurate UIs
+                that work reliably in real production environments.
+            </p>
+        </section>
+
+        <!-- =================================
+             EXPERIENCIA
+             ================================= -->
+
+        <section id="experiencia" class="sobre-seccion">
+            <h2>
+                Experience
+            </h2>
+
+            <article class="experiencia">
+                <div class="experiencia-fecha">
+                    Jan 2026 — Present
+                </div>
+
+                <div class="experiencia-contenido">
+                    <h3>
+                        Senior Full Stack Developer
+                        <span>
+                            · SmartJob · Falabella
+                        </span>
+                    </h3>
+
+                    <p>
+                        I build and maintain enterprise-scale
+                        applications for Falabella Seller Center
+                        (Promotions team), supporting a multinational
+                        retail platform across Chile, Colombia, and
+                        Mexico. I focus on scalable UI architecture,
+                        reusable components, and high-traffic seller
+                        dashboards, working closely with product,
+                        design, and backend teams in an Agile
+                        environment.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span class="tecnologia">
+                            React
+                        </span>
+                        <span class="tecnologia">
+                            Fastify
+                        </span>
+                        <span class="tecnologia">
+                            Microfrontends
+                        </span>
+                        <span class="tecnologia">
+                            Design Systems
+                        </span>
+                        <span class="tecnologia">
+                            i18n
+                        </span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- =================================
+             SKILLS
+             ================================= -->
+
+        <section id="habilidades" class="sobre-seccion">
+            <h2>
+                Skills & Tools
+            </h2>
+
+            <div class="lista-habilidades">
+                <!-- Frontend -->
+                <div class="grupo-habilidades">
+                    <h3>
+                        Frontend
+                    </h3>
+
+                    <ul>
+                        <li>
+                            React
+                        </li>
+                        <li>
+                            Next.js
+                        </li>
+                        <li>
+                            Angular
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Backend -->
+                <div class="grupo-habilidades">
+                    <h3>
+                        Backend
+                    </h3>
+
+                    <ul>
+                        <li>
+                            Python
+                        </li>
+                        <li>
+                            Fastify
+                        </li>
+                        <li>
+                            APIs
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================
+             CERTIFICACIONES
+             ================================= -->
+
+        <section id="certificaciones" class="sobre-seccion">
+            <h2>
+                Certifications
+            </h2>
+
+            <div class="certificacion">
+                <div>
+                    <h3>
+                        AWS Certified Cloud Practitioner
+                    </h3>
+
+                    <p>
+                        AWS
+                    </p>
+                </div>
+
+                <span class="certificacion-fecha">
+                    2025
+                </span>
+            </div>
+        </section>
     </div>
+</section>
 {% endblock %}

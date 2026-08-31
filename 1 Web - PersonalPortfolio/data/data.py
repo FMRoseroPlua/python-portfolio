@@ -1,0 +1,14 @@
+projects = [
+    {
+        "name": "Project 1",
+        "description": "Description 1",
+        "img_url": "url",
+        "technologies": ["Python", "Pandas"],
+    },
+    {
+        "name": "Project 2",
+        "description": "Description 2",
+        "img_url": "url2",
+        "technologies": ["Flask", "Qt"],
+    },
+]

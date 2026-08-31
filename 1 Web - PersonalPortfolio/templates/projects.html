@@ -9,39 +9,52 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Projects</h1>
-    {% for project in projects %}
-        <article>
-            {% if loop.index is odd %}
-                <div class="col-1">
-                    <h2>{{ project.name }}</h2>
-                    <p>{{ project.description }}</p>
+<section id="proyectos">
+    <!-- Encabezado -->
+    <div class="proyectos-encabezado">
+        <p class="proyectos-subtitulo">
+            My work
+        </p>
+        <h1 class="proyectos-titulo">
+            Projects
+        </h1>
+        <p class="proyectos-descripcion">
+            A selection of projects where I combine software
+            development, data analysis and problem solving.
+        </p>
+    </div>
 
+    <!-- Lista de proyectos -->
+    <div class="lista-proyectos">
+        {% for project in projects %}
+        <article class="proyecto {% if loop.index is even %}proyecto-invertido{% endif %}">
+            <!-- Información del proyecto -->
+            <div class="proyecto-info">
+                <span class="proyecto-numero">
+                    {{ "%02d"|format(loop.index) }}
+                </span>
+                <h2 class="proyecto-nombre">
+                    {{ project.name }}
+                </h2>
+                <p class="proyecto-descripcion">
+                    {{ project.description }}
+                </p>
+                <!-- Tecnologías -->
+                <div class="tecnologias">
                     {% for tech in project.technologies %}
-                        <span>{{ tech }}{% if not loop.last %} | {% endif %}</span>
+                    <span class="tecnologia">
+                        {{ tech }}
+                    </span>
                     {% endfor %}
                 </div>
-
-                <div class="col-2">
-                    <img src="{{ project.img_url }}" alt="">
-                </div>
-
-            {% else %}
-                <div class="col-2">
-                    <img src="{{ project.img_url }}" alt="">
-                </div>
-
-                <div class="col-1">
-                    <h2>{{ project.name }}</h2>
-                    <p>{{ project.description }}</p>
-
-                    {% for tech in project.technologies %}
-                        <span>{{ tech }}{% if not loop.last %} | {% endif %}</span>
-                    {% endfor %}
-                </div>
-            {% endif %}
+            </div>
+            <!-- Imagen -->
+            <div class="proyecto-imagen">
+                <div class="proyecto-imagen-brillo"></div>
+                <img src="{{ project.img_url }}" alt="Screenshot of {{ project.name }}" loading="lazy">
+            </div>
         </article>
-    {% endfor %}
-
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}
-
