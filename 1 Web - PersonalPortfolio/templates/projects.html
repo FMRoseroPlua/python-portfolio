@@ -30,14 +30,11 @@
         <article class="proyecto {% if loop.index is even %}proyecto-invertido{% endif %}">
             <!-- Información del proyecto -->
             <div class="proyecto-info">
-                <span class="proyecto-numero">
-                    {{ "%02d"|format(loop.index) }}
-                </span>
                 <h2 class="proyecto-nombre">
                     {{ project.name }}
                 </h2>
                 <p class="proyecto-descripcion">
-                    {{ project.description }}
+                    {{ project.description | safe }}
                 </p>
                 <!-- Tecnologías -->
                 <div class="tecnologias">
@@ -48,13 +45,50 @@
                     {% endfor %}
                 </div>
             </div>
-            <!-- Imagen -->
+
+            <!-- Carrusel de imágenes -->
             <div class="proyecto-imagen">
                 <div class="proyecto-imagen-brillo"></div>
-                <img src="{{ project.img_url }}" alt="Screenshot of {{ project.name }}" loading="lazy">
+
+                {% for image in project.img_url %}
+                    <img
+                        src="{{ url_for('static', filename='img/' + image) }}"
+                        alt="Screenshot {{ loop.index }} of {{ project.name }}"
+                        class="proyecto-slide {% if loop.first %}active{% endif %}"
+                        loading="{% if loop.first %}eager{% else %}lazy{% endif %}"
+                    >
+                {% endfor %}
+
+                <!-- Flechas -->
+                <button class="carrusel-btn carrusel-prev" aria-label="Previous image">
+                    &#10094;
+                </button>
+
+                <button class="carrusel-btn carrusel-next" aria-label="Next image">
+                    &#10095;
+                </button>
+
+                <!-- Indicadores -->
+                <div class="carrusel-indicadores">
+                    {% for image in project.img_url %}
+                        <button
+                            class="carrusel-indicador {% if loop.first %}active{% endif %}"
+                            aria-label="Go to image {{ loop.index }}"
+                        ></button>
+                    {% endfor %}
+                </div>
             </div>
+            <!--Fin carrusel -->
         </article>
         {% endfor %}
     </div>
 </section>
+
 {% endblock %}
+
+
+<!-- Imagen -->
+<!--            <div class="proyecto-imagen">-->
+<!--                <div class="proyecto-imagen-brillo"></div>-->
+<!--                <img src="{{ project.img_url }}" alt="Screenshot of {{ project.name }}" loading="lazy">-->
+<!--            </div>-->
