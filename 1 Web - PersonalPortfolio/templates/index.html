@@ -26,13 +26,12 @@
                 </h1>
 
                 <h2 class="inicio-profesion">
-                    Python Developer and Data Analyst
+                    Python Developer & Data Engineering
                 </h2>
 
                 <p class="inicio-descripcion">
-                    I build digital solutions for problems combining
-                    elegant design with advanced professional engineering
-                    skills to create strong projects and scalable products.
+                    I build scalable solutions with Python, combining backend development,
+                    data science, and big data technologies to turn complex data into powerful digital products.
                 </p>
 
                 <!-- Botones -->
@@ -59,10 +58,34 @@
             <!-- Elemento visual -->
             <div class="inicio-visual">
                 <div class="inicio-visual-brillo"></div>
-                <div class="inicio-visual-contenido">
-                    Especie de panel/terminal de código o una composición con tarjetas que represente Python, datos y desarrollo
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+
+                        <span class="terminal-title">
+                            python_pipeline.py
+                        </span>
+                    </div>
+                    <div class="terminal-body">
+                        <div><span class="code-purple">from</span> fastapi <span class="code-purple">import</span> FastAPI</div>
+                        <div><span class="code-purple">import</span> pandas <span class="code-purple">as</span> pd</div><br>
+                        <div><span class="code-blue">app</span> = FastAPI()</div><br>
+                        <div><span class="code-green">data</span> = pd.read_csv(<span class="code-yellow">"dataset.csv"</span>)</div>
+                        <div><span class="code-green">data</span> = data.dropna()</div><br>
+                        <div class="terminal-output">✓ Data loaded</div>
+                        <div class="terminal-output">✓ Processing completed</div>
+                        <div class="terminal-cursor">█ </div>
+                    </div>
+
                 </div>
+                <div class="tech-card tech-python">Python</div>
+                <div class="tech-card tech-fastapi">FastAPI</div>
+                <div class="tech-card tech-pandas">Pandas</div>
+                <div class="tech-card tech-plotly">Plotly</div>
             </div>
+
         </div>
     </section>
 
