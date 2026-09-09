@@ -334,17 +334,13 @@
 @media (max-width: 900px) {
     #contacto {
         padding-top: 5rem;
+        grid-template-columns: 1fr;
     }
 
     .contacto-encabezado {
         grid-template-columns: 1fr;
         gap: 1rem;
         margin-bottom: 2rem;
-    }
-
-    .contacto-contenido {
-        grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
     .contacto-informacion {
@@ -360,6 +356,7 @@
     #contacto {
         width: 88%;
         padding-top: 4.5rem;
+        grid-template-columns: 1fr;
     }
 
     .contacto-titulo h1 {

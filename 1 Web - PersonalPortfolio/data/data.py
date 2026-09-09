@@ -25,7 +25,7 @@ projects = [
         
         The application also processes the collected information to generate a tax reporting file, providing a structured summary of the invoices and amounts required to complete the corresponding tax declaration through the SRI online portal. This significantly reduces manual data entry and simplifies the process of managing and preparing electronic invoices for tax reporting.
         ''',
-        "img_url": [f"project2-{i}.png" for i in range(1,4)],
+        "img_url": [f"project2-{i}.png" for i in range(1,5)],
         "technologies": ["Python", "Qt", "Web Services/SOAP", "XML", "PDF generatión", "Data processing", "Automation"],
     },
     {
