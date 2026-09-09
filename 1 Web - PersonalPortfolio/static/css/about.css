@@ -161,8 +161,7 @@
 
 .sobre-seccion {
     position: relative;
-    padding-bottom: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     border-bottom: 1px solid var(--color-borde);
 }
 
@@ -191,7 +190,7 @@
 .sobre-seccion h2 {
     margin: 0 0 1.5rem;
     color: var(--color-texto);
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     font-weight: 750;
     letter-spacing: -0.03em;
 }
@@ -203,7 +202,8 @@
 .sobre-biografia {
     margin: 0;
     color: var(--color-texto-secundario);
-    font-size: 1.05rem;
+    text-align: justify;
+    font-size: 0.9rem;
     line-height: 1.9;
 }
 
@@ -265,7 +265,7 @@
 
 .lista-habilidades {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
@@ -292,6 +292,7 @@
 .grupo-habilidades h3 {
     margin: 0 0 1rem;
     color: var(--color-texto);
+    font-size: 1.1rem;
 }
 
 .grupo-habilidades ul {
@@ -420,8 +421,7 @@
     }
 
     .sobre-seccion {
-        padding-bottom: 3.5rem;
-        margin-bottom: 3.5rem;
+        margin-bottom: 2.5rem;
     }
 
     .experiencia {
