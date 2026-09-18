@@ -72,5 +72,6 @@ def text_to_morse(message):
 
 
 if __name__ == "__main__":
-    response = text_to_morse("Hola mundo \n quiero que sepas que te quiero")
-    print(response)
+    import sys
+    texto = sys.argv[1]
+    print(text_to_morse(texto))
