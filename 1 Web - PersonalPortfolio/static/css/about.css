@@ -61,6 +61,8 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 .sobre-foto::before {
@@ -82,6 +84,7 @@
     border-radius: 50%;
     border: 5px solid var(--color-fondo);
     background: var(--color-tarjeta);
+    transform: scale(1.2);
 }
 
 /* ========================================

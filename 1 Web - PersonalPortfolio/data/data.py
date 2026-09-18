@@ -1,22 +1,26 @@
 #SRI Invoice Downloader & Reporter
 projects = [
      {
-        "name": "Sistema de facturación",
-        "description": None,
-        "img_url": [],
-        "technologies": ["Python"],
+        "name": "Electronic Invoicing & Inventory Management System",
+        "description": '''
+        Developing an end-to-end electronic invoicing and inventory management system for a local bar. Responsible for the entire development lifecycle, from database design and system architecture to backend and frontend development. Built secure REST APIs with JWT authentication, Pydantic validation, and SQLAlchemy, while developing a modern React interface for managing business operations and inventory. Designed the system as a scalable foundation for automating core business processes and supporting future integrations.
+        ''',
+        "img_url": [f"project5-{i}.png" for i in range(1, 5)],
+        "technologies": ["Python", "FastAPI", "React", "TypeScript", "PostgreSQL", "SQLAlchemy", "CSS"],
      },
      {
-        "name": "Tesis analisis de datos",
-        "description": None,
-        "img_url": [],
-        "technologies": ["Python"],
+        "name": "Event Ticket Booking Platform",
+        "description": ''' Built the backend of an event ticket booking platform for events in Colombia. Implemented JWT authentication, Google login, Mercado Pago payments, file uploads, shopping cart, coupon management, and an assistant chat system. Developed the API with a team of three backend developers.''',
+        "img_url": [f"project4-{i}.png" for i in range(1, 6)],
+        "technologies": ["Express.js", "TypeScript", "TypeORM", "PostgreSQL", "JWT", "Mercado Pago"],
      },
     {
-        "name": "Analisis poblacion Cotopaxi",
-        "description": None,
-        "img_url": [],
-        "technologies": ["Python"],
+        "name": "Population Evolution Analysis — Cotopaxi, Ecuador",
+        "description": '''
+        Analyzed population census data from Ecuador (1990–2010) to study demographic changes across the province of Cotopaxi. Worked with large-scale datasets, applying data cleaning, transformation, exploratory analysis, and statistical techniques to extract meaningful patterns and trends. Developed geospatial visualizations using gvSIG to represent population evolution across the province and support the interpretation of demographic data.
+        ''',
+        "img_url": [f"project3-{i}.png" for i in range(1,7)],
+        "technologies": ["Python", "Pandas", "NumPy", "Matplotlib", "Big Data", "Data Analysis", "Statistics", "Geospatial Visualization"],
      },
     {
         "name": "SRI Invoice Automation System",
